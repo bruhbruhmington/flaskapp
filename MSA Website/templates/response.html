@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="about.css">
+  <title>About Us</title>
+</head>
+{% block content%}
+<body>
+	<h1>Your response is:</h1>
+	<h3>
+		Wasted score= {{wasted}} <br>
+		Social Interaction score= {{interaction}} <br>
+		Fear of Missing Out score= {{fomo}} <br>
+		Self Confidence score= {{confidence}} <br>
+	</h3>
+	<br>
+{% if wasted <= 50 and fomo <= 50 and interaction <= 50 and confidence <= 50 %}
+<p> You seem to be suffering from no major issues online. Still be careful though as problems might arise in the future. If that ever happens please seek help. </p>
+{% endif %}
+<br>
+{% if interaction > 50%}
+<p> Social media platforms are set up in such a way that encourages you to keep coming back to them even though you just closed them. In a lot of circumstances this leads to mindless scrolling or opening and closing. To combat this you should try to actively think about the actions you take on social media. This is hard to do in the flow of things so you can set yourself a timer, every time the timer rings you think of what you did and whether or not you are spending your time rationally. </p>
+{% endif %}
+<br>
+{% if wasted > 50 %}
+<p> Social media platforms are set up in such a way that encourages you to keep coming back to them even though you just closed them. In a lot of circumstances this leads to mindless scrolling or opening and closing. To combat this you should try to actively think about the actions you take on social media. This is hard to do in the flow of things so you can set yourself a timer, every time the timer rings you think of what you did and whether or not you are spending your time rationally. </p>
+{% endif %}
+<br>
+{% if confidence > 50 %}
+<p> 
+Many people on social media suffer from decreased self worth or a negative body image. The lives and images you see on social media often do not reflect reality. Staging events, only showing the best of the highlights or photoshopping yourself are common practices. It may be good to take a step back from social media for now to look around you in your community, class or other social circle and see how an actual person or life actually is. This should help to give you more satisfaction for your own life and self.
+ </p>
+{% endif %}
+<br>
+{% if fomo > 50 %}
+<p> It is easy to feel like you are missing out on something when using social media. Every minute you don’t check one of your devices is a minute someone could be texting you in, or some news would come out. This is true, but think about all of the things you are missing out on in the real world. Taking a slower approach will massively decrease any anxiety you might have and make you happier overall. </p>
+{% endif %}
+
+
+</body>
+{% endblock %}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="about.css">
+  <title>About Us</title>
+</head>
+<body>
+<style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+  height: 50%;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+    height: 10%
+  }
+}
+
+*{
+  padding:0px;
+  margin: 0px;
+  box-sizing: border-box;
+  
+}
+
+.logo h3{
+  color:  #ffffff;
+  font: normal 28px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.logo h3 span{
+  color:  lightseagreen;
+}
+.idk{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:#5D5C61;
+  font-family: Open Sans;
+  
+}
+.logo{
+  color: rgb(226, 226, 226);
+  letter-spacing: 0px;
+  font-size:20px;
+  }
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger{
+  display: none;
+  cursor: click;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  border-radius: 25px;
+
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+    width: 60%;
+  }
+  
+
+}
+@media screen and (max-width:670px){
+
+    body{
+      overflow-x: hidden;
+      
+    }
+
+    .nav-links{
+    position: absolute;
+    right: 0px;
+    height:92vh;
+    top: 8vh;
+    background-color: #5D5C61;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 45%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 7;
+    }
+
+    .nav-links li{
+     opacity: 0;
+     }
+
+    .burger{
+     display: block;
+      }
+
+}
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.header{
+  grid-area: header;
+  position: relative;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+
+
+
+
+</style>
+  
+
+  <div class="header">  
+        <nav class="idk">
+           <div class="logo">
+
+                <h3>SM<span>check</span></h3>
+              </div>
+              <ul class="nav-links">
+                <li><a href=/>Home</a></li>
+                <li><a href=graph>Graphs</a></li>
+                <li><a href=survey>Survey</a></li>
+                <li><a href=about>About us</a></li>
+        
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </div> 
+
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>We are 10th grade student who produced this website as a product for MSA project.</p>
+  <p>We created this website with passion.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="static/images/elephantseal.jpeg" alt="Teddy" style="width:100%">
+      <div class="container">
+        <h2>Teddy Heo</h2> <br>
+        <p class="title">Developer & designer</p> <br>
+        <p></p>
+        <p>teddy.heo@isceducation.de</p> <br>
+       
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src= "static/images/barakfriend.jpeg" alt="Barak" style="width:100%">
+      <div class="container">
+        <h2>Barak Oz Sinay</h2> <br>
+        <p class="title">Back-end developer</p> <br>
+        <p>
+          
+        </p>
+        <p>barak.oz-sinay@isceducation.de</p> <br>
+          <p>
+            
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="static/images/horse.jpeg" alt="Jan" style="width:100%">
+      <div class="container">
+        <h2>Jan Gerkens</h2> <br>
+        <p class="title">contents-director</p> <br>
+        <p></p>
+        <p>jan.gerkens@isceducation.de</p> <br>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>SM<span>check</span></h3>
+
+				<p class="footer-links">
+					<a href=/ class="link-1">Home</a>
+					
+					<a href=graph>graphs</a>
+				
+					<a href=survey>Survey</a>
+				
+					<a href=about>About us</a>
+					
+				</p>
+
+				<p class="footer-company-name">SMcheck © 2021</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Eggerstedter Weg 19,</span> 25421, Pinneberg</p>
+				</div>
+
+	
+<br>
+  				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:teddy.heo@isceducation,de">teddy.heo@isceducation.de</a></p>
+				</div>
+
+			</div>
+      
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About SMcheck</span>
+          We offer you with graphs and survey! Every information you enter in the survey will be kept anonymous.(you dont have to include any personal info anyway). Have a look around!
+				</p>
+
+				<div class="footer-icons">
+      
+
+				</div>
+
+			</div>
+
+		</footer>
+<script src="script.js"></script>
+</body>
+</html>
